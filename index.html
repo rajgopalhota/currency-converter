@@ -3,59 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Currency Converter - Convert your currency</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="icon" href="./assets/exchange.png" type="image/gif" />
+    <script
+      src="https://kit.fontawesome.com/1deaab12ff.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <nav>
-      <div class="logo">CurrencyConverter - Currency API</div>
+      <div class="logo">
+        CurrencyConverter &nbsp;<i class="fa-solid fa-coins fa-bounce"></i>
+      </div>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="https://rajgopalhota.netlify.app/">About Me</a></li>
+        <li>
+          <a href="/"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        </li>
+        <li>
+          <a href="https://rajgopalhota.netlify.app/"
+            ><i class="fa-solid fa-address-card"></i>&nbsp;About Me</a
+          >
+        </li>
         <li>
           <a
             href="mailto:rajgopalhotanrg@gmail.com? subject=Contact to Rajgopal!"
             target="_blank"
           >
-            Contact</a
+            <i class="fa-brands fa-telegram"></i>&nbsp;Contact</a
           >
         </li>
       </ul>
     </nav>
     <section>
       <div class="container">
-        <marquee
-          >If API is not working then, the monthly limit for free API calls are
-          reached. It is a free plan monthly 300 req are supported!</marquee
-        >
-        <form action="/action.php" method="get">
-          <label for="quantity">Enter amount: </label>
-          <input type="number" name="quantity" min="1" max="10" />
-          <label for="currency">Choose a currency: </label>
-          <select name="currency">
-            <option value="INR">Indian Rupee</option>
-            <option value="USD">US Dollar</option>
-            <option value="EUR">Euro</option>
-          </select>
-          <button class="btn" type="submit">Submit</button>
-        </form>
+        <div class="flexcont">
+          <div class="flexbox">
+            <img src="./assets/robot.svg" />
+          </div>
+          <div class="flexbox">
+            <form action="" method="get">
+              <marquee
+                >The data is updated on "last_updated_at":
+                "2023-08-31T23:59:59Z"</marquee
+              >
+              <label for="#quantity"
+                ><i class="fa-solid fa-sack-dollar fa-flip"></i>&nbsp;Enter
+                amount:
+              </label>
+              <input
+                type="number"
+                name="quantity"
+                min="1"
+                id="quantity"
+                placeholder="Enter Value Here"
+                required
+              />
+              <label for="#currency"
+                ><i class="fa-solid fa-clipboard-check fa-flip"></i>&nbsp;Choose
+                a currency:
+              </label>
+              <select name="currency" id="currency">
+                <option value="INR">Indian Rupee</option>
+                <option value="AED">Dihram</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">Great Britain Pound</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="THB">Thai Baht</option>
+                <option value="PKR">Pakistani Rupee</option>
+                <option value="BTC">Bitcoin</option>
+              </select>
+              <button class="btn" type="submit">
+                <i class="fa-solid fa-circle-check"></i>&nbsp;Submit
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
       <div class="container container1">
         <div class="output">
-          <h2>Here is your converted values in different currencies</h2>
+          <h2>
+            <i class="fa-solid fa-dove fa-beat-fade"></i>&nbsp;Here is your
+            converted values in different currencies........
+          </h2>
           <center>
-          <table>
-            <thead>
-              <tr>
-                <th>Currency</th>
-                <th>Code</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </center>
+            <input
+              type="text"
+              id="searchInput"
+              onkeyup="searchTable()"
+              placeholder="Search for currency.."
+            />
+            <table id="currencyTable">
+              <thead>
+                <tr>
+                  <th>
+                    <i class="fa-solid fa-diagram-project"></i>&nbsp;Currency
+                  </th>
+                  <th>
+                    <i class="fa-solid fa-money-bill-transfer"></i>&nbsp;Value
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                  <td>${key}</td>
+                  <td>${rJson["data"][key]["code"]}</td>
+                  <td>${Math.round(rJson["data"][key]["value"] * value)}</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </center>
         </div>
       </div>
     </section>
@@ -64,6 +123,6 @@
       <a href="https://github.com/rajgopalhota">@RAJGOPAL HOTA</a>
     </footer>
     <script></script>
-    <script src="main.js"></script>
+    <script src="./assets/main.js"></script>
   </body>
 </html>
