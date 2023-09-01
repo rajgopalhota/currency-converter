@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./5044561.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  overflow-x: hidden;
+}
+nav {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  display: flex;
+  font-size: 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 255, 0.4),
+    rgba(255, 0, 0, 0.4)
+  );
+  padding: 13px 27px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 18px black;
+}
+nav ul {
+  margin: auto;
+}
+nav li a {
+  text-decoration: none;
+  color: rgb(2, 3, 18);
+  transition: all;
+  transition-duration: 500ms;
+}
+
+nav li a:hover {
+  transition: all 0.2s linear;
+  text-decoration: none;
+  color: rgb(255, 227, 218);
+  letter-spacing: 1px;
+}
+
+div.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 33px;
+  font-size: 24px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+
+nav ul {
+  display: flex;
+}
+/* .container1{
+  display: none;
+} */
+.container {
+  min-height: fit-content;
+  font-family: "Poppins", sans-serif;
+  max-width: 80vw;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.2),
+    rgba(0, 0, 255, 0.2)
+  );
+  backdrop-filter: blur(8px);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.container h1,
+h2 {
+  margin: 23px 0;
+}
+.container marquee {
+  margin: 10px 0;
+  color: red;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form label {
+  font-size: 25px;
+}
+
+.container form input[type="number"],
+select,
+label {
+  font-size: 25px;
+  width: 23vw;
+  margin-bottom: 23px;
+}
+
+.btn {
+  width: 144px;
+  padding: 5px 8px;
+  font-size: 20px;
+  background: rgb(108, 0, 108);
+  color: black;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  color: #fff;
+  box-shadow: rgb(108, 0, 108) 0px 25px 50px -12px;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  transition: all 0.2s linear;
+  border: 2px solid rgb(108, 0, 108);
+  background: #111;
+  letter-spacing: 1px;
+}
+
+
+.output table {
+  width: 50vw;
+  text-align: center;
+  border: 2px solid black;
+  font-size: 20px;
+}
+
+.output table th {
+  padding: 3px;
+}
+
+section{
+  min-height: 100dvh;
+}
+
+input, select{
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(1, 0, 37, 0.667);
+  border-bottom: 3px solid rgb(255, 174, 0);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 25px -5px, rgba(0, 0, 0, 0.3) 0px 10px 10px -5px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  nav ul li {
+    margin: 5px 13px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 95vw;
+  }
+
+  .container form input[type="number"],
+  select,
+  label {
+    width: 80vw;
+  }
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  color: white;
+  min-width: 100dvw;
+  padding: 20px 24px;
+}
+footer a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+footer a:hover {
+  transition: all ease 0.2s;
+  letter-spacing: 2px;
+  color: white;
+}
